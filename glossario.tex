@@ -1,0 +1,212 @@
+% !TeX spellcheck = it_IT
+%**************************************************************
+% Acronimi
+%**************************************************************
+\renewcommand{\acronymname}{Acronimi e abbreviazioni}
+
+\newacronym[description={\glslink{apig}{Application Program Interface}}]
+{api}{API}{Application Program Interface}
+
+\newacronym[description={\glslink{svmg}{Support Vector Machine}}]
+{svm}{SVM}{Support Vector Machine}
+
+\newacronym[description={\glslink{podg}{Page Object Detection}}]
+{pod}{POD}{Page Object Detection}
+
+\newacronym[description={\glslink{ioug}{Intersection over Union}}]
+{iou}{IoU}{Intersection over Union}
+
+\newacronym[description={\glslink{rcnng}{Fast Region-based Convolutional Neural Network}}]
+{rcnn}{R-CNN}{Region-based Convolutional Neural Network}
+
+\newacronym[description={\glslink{cnng}{Convolutional Neural Network}}]
+{cnn}{CNN}{Convolutional Neural Network}
+
+\newacronym[description={\glslink{ocrg}{Optical Character Recognition}}]
+{ocr}{OCR}{Optical Character Recognition}
+
+\newacronym[description={\glslink{restg}{REpresentational State Transfer}}]
+{rest}{REST}{REpresentational State Transfer}
+
+\newacronym[description={\glslink{ideg}{Integrated Development Environment}}]
+{ide}{IDE}{Integrated Development Environment}
+
+\newacronym[description={\glslink{lstmg}{Long Short-Term Memory}}]
+{lstm}{LSTM}{Long Short-Term Memory}
+
+\newacronym[description={\glslink{awsg}{Amazon Web Services}}]
+{aws}{AWS}{Amazon Web Services}
+
+
+
+%**************************************************************
+% Glossario
+%**************************************************************
+%\renewcommand{\glossaryname}{Glossario}
+
+\newglossaryentry{apig}
+{
+    name=\glslink{api}{API},
+%    text=API,
+    sort=api,
+    description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
+}
+\newglossaryentry{ioug}
+{
+    name=\glslink{iou}{IoU},
+%    text=IoU,
+    sort=iou,
+    description={L'\textit{Intersection over Union} è una metrica di valutazione usata per misurare l'accuratezza di una \textit{object detection} in un particolare dataset. Si tratta di una semplice metrica di valutazione: un qualsiasi algoritmo che offre delle scatole di predizione può essere valutato usando l'IoU. \\Per applicare l'IoU bisogna avere sia le etichette originali dei dati, che le etichette ricavate dall'allenamento. Dopodiché il calcolo è semplice, poiché è l'area sovrapposta diviso l'area dell'unione risultante delle due etichette. Ovviamente più alto è il rapporto più l'etichetta ricavata dall'allenamento sarà precisa.}
+}
+\newglossaryentry{podg}
+{
+    name=\glslink{pod}{POD},
+%    text=POD,
+    sort=pod,
+    description={Page Object Detection è uno strumento di \textit{computer vision} che si occupa di trovare degli oggetti caratteristici all'interno di documenti, come grafici, tabelle e immagini} 
+}
+
+\newglossaryentry{set}{
+	name=\textit{set},
+%	text=set,
+	sort=set,
+	description={parola che occorre spesso nel testo, indica un insieme di dati e, nel contesto di questa tesi, in particolare un insieme di dati tra di loro concordi, che abbiano al loro interno una etichetta o un qualsiasi tipo di informazione inerente al contenuto dei dati stessi}
+}
+\newglossaryentry{zero-padding}{
+	name=\textit{zero-padding},
+%	text=zero-padding,
+	sort=zero-padding,
+	description={il \textit{zero-padding} è una tecnica di trasformazione di immagini che consiste nell'aggiungere degli zeri attorno ad una matrice di pixel per aumentarne le dimensioni. Viene spesso usato per far coincidere le dimensioni di matrici diverse quando informazioni vengono passate tra uno strato e l'altro.}
+}
+\newglossaryentry{convoluzioni}{
+	name=convoluzione,
+%	text=convoluzioni,
+	sort=convoluzione,
+	description={la convoluzione è un'operazione matematica che descrive una regola per miscelare due funzioni oppure due pezzi distinti di un'informazione. Nelle reti neurali per l'\textit{object detection}, maschere di convoluzione servono per ricavare informazioni diffuse all'interno di immagini, come ad esempio i bordi.}
+}
+\newglossaryentry{vanishing gradient}{
+	name=\textit{vanishing gradient},
+%	text=vanishing gradient,
+	sort=vanishing gradient,
+	description={fenomeno che accade spesso nelle reti molto profonde e che non hanno degli strumenti di \textit{backpropagation} adeguati, consiste nel fatto che il gradiente emesso dalla funzione errore decresce esponenzialmente non appena esso viene propagato all'indietro ai precedenti \textit{layers}. In pratica, nel tempo in cui l'errore viaggiava "all'indietro" nella rete verso i \textit{layers} antecedenti, esso diventa così piccolo che l'apprendimento conseguente risulta quasi pari a zero.
+	}
+}
+\newglossaryentry{max-pooling}{
+	name=\textit{max-pooling},
+%	text=max-pooling,
+	sort=max-pooling,
+	description={il \textit{pooling} è un'operazione matematica che prende in ingresso una serie di input e li riduce ad un singolo valore. Quindi, in particolare, il \textit{max-pooling} prende come input una matrice di dimensione variabile e ne restituisce il valore massimo.}
+}
+\newglossaryentry{canali}{
+	name=canale,
+	text=canali,
+	sort=canale,
+	description={In generale, quando si parla di canali nelle reti neurali ci si riferisce spesso alla terza dimensione di una matrice cubica, ovvero alla "profondità" che essa ha. Pensando ad una immagine a tre canali (uno per ogni colore primario), ogni canale corrisponde ad una matrice quadrata della dimensione dell'immagine stessa.}
+}
+\newglossaryentry{classi}{
+	name=classe,
+%	text=classi,
+	sort=classe,
+	description={Una classe nelle reti neurali corrisponde ad una caratteristica che si vuole ricercare all'interno di un set di dati. Pensando all'\textit{object detection}, in un'immagine ogni classe corrisponde ad un determinato oggetto che vogliamo individuare: un lampione, una ruota, una persona, ecc.}
+}
+\newglossaryentry{svmg}{
+	name=\gls{svm},
+    sort=svm,
+	description={sono anche chiamate macchine \textit{kernel} e sono delle metodologie di apprendimento supervisionato per la regressione e la classificazione di \textit{pattern}, sviluppati negli anni '90 da Vladimir Vapnik e il suo team presso il laboratori Bell della AT\&T}
+}
+\newglossaryentry{regressione lineare}{
+    name=regressione lineare,
+    sort=regressione lineare,
+    description={un problema di regressione consiste nel prevedere il valore di una variabile numerica in base ai valori di uno o più variabili predittive, che possono essere numerici o categorici. Nel caso citato, ci si riferisce ad un metodo matematico di calcolo di regressione che è lineare.}
+}
+\newglossaryentry{rcnng}{
+    name=R-CNN,
+    sort=rcnn,
+    description={una \textit{Region-based Convolutional Neural Network} è una rete neurale a strati di convoluzione che ha, come input, delle regioni "proposte" da parte di un altro algoritmo.}
+}
+\newglossaryentry{cnng}{
+    name=CNN,
+    sort=cnn,
+    description={una \textit{Convolutional Neural Network} è una rete neurale a strati di convoluzione.}
+}
+\newglossaryentry{softmax}{
+    name=\textit{softmax},
+    sort=softmax,
+    description={una funzione \textit{softmax} è una generalizzazione di una funzione logistica che comprime un vettore $n$-dimensionale di valori reali arbitrari in un vettore $n$-dimensionale di valori compresi tra $(0,1)$ la cui somma è $1$.}
+}
+\newglossaryentry{non-maximum suppression}{
+    name=\textit{non-maximum suppression},
+    sort=non-maximum suppression,
+    description={è una tecnica per eliminare punti che non corrispondono a zone dove esistono bordi rilevanti.}
+}
+\newglossaryentry{hard negative mining}{
+    name=\textit{hard negative mining},
+    sort=hard negative mining,
+    description={è una tecnica che consiste nel creare forzatamente degli esempi \textit{negativi} all'interno di un \textit{dataset}. Facciamo un esempio: in un \textit{dataset} di volti, per fare l'\textit{hard negative mining} è necessario prendere porzioni di immagine dove non sono presenti tabelle ed etichettarli come "volto non presente". Questo abbassa notevolmente i falsi positivi.}
+}
+\newglossaryentry{ocrg}{
+    name=\textit{Optical Character Recognition},
+    sort=ocr,
+    description={i programmi che si occupano di fare OCR sono dedicati al rilevamento dei caratteri contenuti in un documento e al loro trasferimento in testo digitale leggibile da una macchina.}
+}
+\newglossaryentry{restg}{
+    name=\textit{REpresentational State Transfer},
+    sort=rest,
+    description={è uno stile architetturale, ovvero un'astrazione degli elementi di un'architettura all'interno di un sistema distribuito.}
+}
+\newglossaryentry{ideg}{
+    name=\textit{Integrated Development Environment},
+    sort=ide,
+    description={in informatica, è un software che, in fase di programmazione, aiuta i programmatori nello sviluppo del codice sorgente di un programma.}
+}
+\newglossaryentry{dataset}{
+    name=\textit{dataset},
+    sort=dataset,
+    description={insieme di dati. Nell'allenamento di reti neurali è importante perché è l'input che si dà in pasto agli algoritmi: tanto meglio è fatto, più sperabilmente buono è il risultato.}
+}
+\newglossaryentry{learning rate}{
+    name=\textit{learning rate},
+    sort=learning rate,
+    description={tasso di apprendimento. In una rete neurale esso rappresenta la "velocità" con cui una rete può imparare. \'E il parametro principale da regolare quando si vuole allenare una rete neurale.}
+}
+\newglossaryentry{batch size}{
+    name=\textit{batch size},
+    sort=batch size,
+    description={numero di input da processare in una valutazione. Se pari a al numero di elementi in input equivale ad eseguire una valutazione sull'intero set di dati per \textit{epoch}. Se lo si diminuisce si ha la possibilità di validare solo una parte dei dati, con i quali eseguire delle stime, quindi procedere ad una validazione di un altro \textit{set} di dati.}
+}
+\newglossaryentry{data augmentation}{
+    name=\textit{data augmentation},
+    sort=data augmentation,
+    description={talvolta può essere utile generare un\textit{dataset} sintetico a partire dai propri dati. Questo viene generato tramite il \textit{data augmentation} e corrisponde ad alcune modificazioni "standard" che si possono fare alle immagini, come ad esempio: ritaglio casuale, ingrandimenti, riduzione di dimensione, rotazione, ecc.}
+}
+\newglossaryentry{lstmg}{
+    name=\textit{Long Short-Term Memory},
+    sort=long short term memory,
+    description={la LSTM è una tipologia di \textit{recurrent neural networl} che è provvista di un \textit{forget gate}, che è utile per dimenticare, dopo un certo lasso di tempo, alcune \textit{features} imparate in precedenza. Può essere utile per imparare da dati dove possono esserci presenti dei vuoti di lunghezza non conosciuta.}
+}
+\newglossaryentry{overfitting}{
+    name=\textit{overfitting},
+    sort=overfitting,
+    description={in statistica e in informatica, si parla di \textit{overfitting} (in italiano: eccessivo adattamento) quando un modello statistico molto complesso si adatta ai dati osservati (il campione) perché ha un numero eccessivo di parametri rispetto al numero di osservazioni.}
+}
+\newglossaryentry{generators}{
+    name=\textit{generators},
+    sort=generators,
+    description={i generatori sono un tipo di iterabile, come le liste e le tuple. Ma a differenza delle liste, i generatori non permettono l’indicizzazione con indici arbitrari e permettono di dichiarare una funzione che si comporti come un iteratore, utilizzandola poi in un ciclo for.}
+}
+\newglossaryentry{awsg}{
+    name=\textit{Amazon Web Services},
+    sort=aws,
+    description={Amazon Web Services offre servizi di cloud computing affidabili, scalabili ed economici. L'account è gratuito e si pagano solo i servizi usati.}
+}
+\newglossaryentry{funzione di attivazione}{
+    name=\textit{funzione di attivazione},
+    sort=funzione attivazione,
+    description={una funzione di attivazione è una fuzione matematica che agisce come una sorta di filtro che decide se il risultato è abbastanza "buono" da poter essere inoltrato al nodo successivo. La più nota e attutalmente utilizzata è la \textit{ReLU} che è così composta:
+        \[ReLU(x)=max(x,0)\]
+        che quindi prende il massimo tra il numero e 0, escludendo così gli output negativi.
+    }
+}
+
+
+

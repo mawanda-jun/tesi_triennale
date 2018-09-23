@@ -1,0 +1,88 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+% !TeX spellcheck = it_IT
+
+\chapter{Valutazione retrospettiva}
+Si riporta di seguito una valutazione retrospettiva dell'esperienza di stage, al fine di valutare ciò che è stato fatto, le esperienze apprese e trarre insegnamenti per il futuro.
+
+\section{Raggiungimento degli obiettivi}
+Durante tutto il tempo di stage mi sono reso conto di dover continuamente tenere in considerazione le conoscenze da acquisire e la loro effettiva implementazione. La teoria da imparare è molta e non ho esaurito lo scibile in così poco tempo: ogni volta che mi si poneva un problema ho dovuto scegliere se risolverlo con un approccio teorico - e dispendioso in termini di tempo - oppure con uno funzionale, ma che non sempre permette di trarre insegnamenti validi. D'altro canto, il rischio opposto - ovvero di fossilizzarsi sulla teoria - era altrettanto pericoloso. Nonostante ciò ho raggiunto una buona copertura degli obiettivi definiti nel piano di lavoro.
+\newpage
+{
+    \def\arraystretch{2}\tabcolsep=10pt
+    \begin{table}[!ht]
+        \small
+        \begin{tabular}{ |p{1cm} |p{7cm}| p{3cm}|}
+            \hline
+            \textbf{ID} & \textbf{Descrizione} & \textbf{Stato} \\ \hline
+            
+            \multicolumn{3}{|c|}{\textbf{Obbligatori}} \\ \hline
+            
+            O01 & Creazione di un algoritmo che faciliti la creazione di un dataset per allenare una rete neurale & Completato \\ \hline
+            O02 & Creazione di una struttura di testing per la valutazione visiva dei risultati ottenuti & Completato \\ \hline
+            O03 & Creazione di un algoritmo di estrazione di informazioni mirate da un libretto assicurativo & Completato \\ \hline
+            O04 & Gestione di tutti gli algoritmi il più automatica possibile, possibilmente tramite l'uso di costanti & Completato \\ \hline
+            O05 & Utilizzo del linguaggio Python versione 3 & Completato \\ \hline
+            
+            \multicolumn{3}{|c|}{\textbf{Desiderabili}} \\ \hline
+            
+            D01 & Creazione di un batch multithreading per l'estrazione parallela di informazioni da più polizze & Completato \\ \hline
+            
+            \multicolumn{3}{|c|}{\textbf{Facoltativi}} \\ \hline
+            
+            F01 & Integrazione del sistema nell'infrastruttura dell'azienda & Non completato \\ \hline
+            
+        \end{tabular}
+        \caption{Tabella raggiungimento degli obiettivi}
+    \end{table}
+}
+\newpage
+\section{Resoconto dell'analisi dei rischi}
+Si riporta inoltre il riscontro dell'analisi dei rischi analizzati ad inizio stage.
+{
+    \def\arraystretch{2}\tabcolsep=10pt
+    
+    \begin{table}[H]
+        \small
+        \begin{tabular}{ |p{4.5cm} |p{2cm} |p{4.5cm}|}
+            \hline
+            \textbf{Descrizione} & \textbf{Verificato} & \textbf{Piano attuato} \\ \hline
+            \textbf{Non conoscenza del linguaggio}: prima di iniziare lo stage non avevo mai programmato in Python; &
+            SI & 
+            Ho trovato dei meccanismi di apprendimento rapido del linguaggio, tramite corsi online e provando fin da subito a scrivere del codice per conto proprio. Inoltre ho chiesto spesso agli altri stagisti qualche domanda più tecnica che mi potesse risparmiare del tempo per la ricerca \\
+            \hline
+            
+            \textbf{Non conoscenza della materia}: Prima dell'inizio dello stage la conoscenza teorica in mio possesso di \textit{machine learning}, \textit{deep learning} e di reti neurali era generale e per niente applicata &
+            SI &
+            Ho frequentato fin dalla prima settimana dei corsi specializzanti. \\ 
+            \hline
+            
+            \textbf{Non conoscenza degli strumenti}: Per il \textit{machine learning} e il \textit{deep learning} esistono tutta una serie di strumenti già pronti all'uso che risparmiano molto tempo in fase di progettazione e codifica. &
+            SI &
+            Anche durante lo studio di preparazione ho avuto modo di confrontarmi con le tecnologie che poi sarei dovuto andare ad utilizzare \\
+            \hline
+            \textbf{Esami durante il lavoro}: Lo stage è iniziato senza avere la certezza di aver superato un esame, che avrei dovuto quindi sostenere durante il periodo di lavoro. &
+            SI &
+            Ho pianificato la progettazione in maniera tale per cui ho lasciato la fase di allenamento e test nel periodo subito antecedente l'esame. Così la sera sono riuscito a studiare proficuamente. \\
+            \hline
+        \end{tabular}
+        \caption{Riscontro dell'analisi dei rischi}
+    \end{table}
+}
+\section{Possibili miglioramenti futuri}
+La scarsa conoscenza iniziale della teoria e degli strumenti non mi hanno permesso di ottimizzare al meglio il prodotto da me costruito. Sicuramente l'allenamento della rete neurale, fatto sulla macchina personale, è migliorabile. L'azienda dispone di uno spazio \glslink{aws}{AWS} che potrebbe essere sfruttato a questo scopo.
+\medskip
+\\C'è inoltre da segnalare la diversità dei \textit{dataset} di allenamento e di effettivo utilizzo: la creazione di un \textit{dataset} personalizzato è d'obbligo, in questo senso, per migliorare le prestazioni della rete. A questo scopo l'idea futura è quella di implementare l'algoritmo da me creato nella piattaforma, cosicché siano gli utenti stessi a correggere e generare il \textit{dataset} in maniera assistita.
+\medskip
+\\Altro punto da segnalare è modificare la \textit{pipeline} di inferenza in maniera tale che essa abbia la possibilità di evitare l'algoritmo di inferenza qualora il PDF sia riconosciuto come "stampato" e non scansionato da scanner.
+
+\section{Conoscenze acquisite e valutazione finale}
+Tra le conoscenze meramente tecniche ho avuto modo di acquisire un nuovo linguaggio di programmazione e moltissimi \textit{framework} che mi saranno estremamente utili nel percorso di studi magistrale e in prospettiva lavorativa. In particolare, l'aver imparato un po' della teoria che sta dietro i più famosi algoritmi di \textit{deep learning} e aver messo "le mani in pasta" per quanto riguarda \grayname{Tensorflow}, \grayname{OpenCV} e \grayname{Keras} ha centrato appieno le aspettative che avevo in mente ad inizio stage. Ho felicemente constatato che le capacità acquisite durante il corso di studi triennale mi hanno permesso di adattarmi perfettamente e senza troppe difficoltà alla mancata conoscenza di praticamente tutto ciò che riguardava lo stage.
+\medskip
+\\Non da meno ho imparato ad introdurmi in un team già preconfigurato dove il \textit{core} aziendale non è strettamente quello informatico, bensì quello assicurativo. In più ho potuto condividere moltissime curiosità, osservazioni e possibili sviluppi ulteriori riguardanti le reti neurali con un collega lavoratore presso RiskApp, Luca Bizzaro, che mi hanno stimolato enormemente per uno studio ulteriore, più approfondito e mirato dell'argomento.
+\medskip
+\\In conclusione l'esperienza presso RiskApp è stata estremamente proficua sotto entrambi gli aspetti umani e professionali e spero di poter ripete l'esperienza anche in futuro.
+
+
+

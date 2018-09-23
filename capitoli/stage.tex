@@ -1,0 +1,138 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = tesi.tex
+% !TeX spellcheck = it_IT
+
+%**************************************************************
+\chapter{Lo stage}
+\label{cap:stage}
+%**************************************************************
+
+%\intro{Brevissima introduzione al capitolo}\\
+
+%**************************************************************
+\section{L'idea}
+Lo stage è stato proposto durante l'incontro STAGE-IT\cite{site:stageit} tra le aziende e gli studenti di informatica e di ingegneria informatica. L'idea all'interno del quale si innesta lo stage proposto era la possibilità, da parte di un'agente assicurativo, di caricare una polizza assicurativa o il libretto e di poter ricavare, automaticamente, tutti i dati salienti in esso contenuti in maniera automatica. Quindi: ubicazioni, dimensioni, premi assicurativi, coperture, eccezioni, eccetera. 
+\medskip
+\\Dall'idea si è poi passati alla pratica: il primo passaggio sarebbe stato quello di creare un lettore \glslink{ocr}{OCR} di PDF per così dire "intelligente", che quindi fosse in grado di comprendere dove fossero posizionate le tabelle e il testo per poter poi analizzare le due tipologie di strutture dati in maniera differente e più efficace.
+
+\section{Aspettative aziendali}
+L'azienda RiskApp sperava, grazie allo stage, di poter iniziare a mettere "le mani in pasta" in un ambiente completamente non sondato del suo business. La possibilità di avere uno strumento del genere nel proprio portale le permetterebbe infatti di ampliare il \textit{set} di strumenti già in loro possesso, facilitando la navigazione e il reperimento delle informazioni da parte dell'utilizzatore. Inoltre ha un importante ruolo nella generazione di un database ordinato, all'interno del quale inserire tutte quelle informazioni specifiche che, se estrapolate a mano, avrebbero un costo proibitivo.
+
+\section{Aspettative personali}
+Ho affrontato l'evento STAGE-IT con il desiderio di poter trovare un'azienda che mi proponesse uno stage riguardante l'intelligenza artificiale. Fino ad allora mi ero solamente informato in maniera generica sull'argomento: volevo finalmente imparare a utilizzare gli algoritmi di \textit{machine learning} e \textit{deep learning} e capire come declinarli nell'ambito aziendale. Invero, tra le oltre 80 aziende e molte più offerte di stage, solo due o tre offrivano questa possibilità e RiskApp mi ha convinto per il fatto che è una realtà giovane - è ancora registrata come StartUp. Ero infatti anche molto incuriosito dall'idea di azienda fortemente dinamica.
+
+\section{Obiettivi}
+Gli obiettivi stilati ad inizio stage erano molto audaci e, sebbene questo abbia portato la ridefinizione del piano di lavoro in corso d'opera, ha aiutato l'azienda a capire la complessità dell'argomento e spronato me a velocizzare il più possibile il processo conoscitivo e produttivo.
+\medskip
+\\Dagli obiettivi presentati dall'azienda ho estrapolato dei requisiti, che seguiranno le seguenti notazioni:
+\begin{itemize}
+    \item \textbf{O} per gli requisiti obbligatori;
+    \item \textbf{D} per gli requisiti desiderabili, quindi non vincolanti ma dal valore aggiuntivo;
+    \item \textbf{F} per gli requisiti facoltativi
+\end{itemize}
+Nella tabella ogni notazione sarà seguito da un numero, per poter identificare ogni obiettivo univocamente.\\
+
+{
+    \def\arraystretch{2}\tabcolsep=10pt
+\begin{table}[H]
+    \small
+    \begin{tabular}{ |p{2cm} |p{11cm}|}
+        \hline
+        \textbf{ID} & \textbf{Descrizione} \\ \hline
+        
+        \multicolumn{2}{|c|}{\textbf{Obbligatori}} \\ \hline
+        
+        O01 & Creazione di un algoritmo che faciliti la creazione di un dataset per allenare una rete neurale \\ \hline
+        O02 & Creazione di una struttura di testing per la valutazione visiva dei risultati ottenuti \\ \hline
+        O03 & Creazione di un algoritmo di estrazione di informazioni mirate da un libretto assicurativo \\ \hline
+        O04 & Gestione di tutti gli algoritmi il più automatica possibile, possibilmente tramite l'uso di costanti \\ \hline
+        O05 & Utilizzo del linguaggio Python versione 3 \\ \hline
+        
+        \multicolumn{2}{|c|}{\textbf{Desiderabili}} \\ \hline
+        
+        D01 & Creazione di un batch multithreading per l'estrazione parallela di informazioni da più polizze \\ \hline
+        
+        \multicolumn{2}{|c|}{\textbf{Facoltativi}} \\ \hline
+        
+        F01 & Integrazione del sistema nell'infrastruttura dell'azienda \\ \hline
+        
+    \end{tabular}
+    \caption{Tabella degli obiettivi}
+\end{table}
+}
+    
+   
+\section{Analisi preventiva dei rischi}
+Durante la fase iniziale ho individuato alcuni possibili rischi che questo progetto mi avrebbe potuto portare ad affrontare, consentendomi di elaborare una strategia di conseguenza:
+
+{
+    \def\arraystretch{2}\tabcolsep=10pt
+    
+\begin{table}[H]
+    \small
+    \begin{tabular}{ |p{4.5cm} |p{4.5cm} |p{3cm}|}
+        \hline
+        \textbf{Descrizione} & \textbf{Piano di emergenza} & \textbf{Rischio} \\ \hline
+        \textbf{Non conoscenza del linguaggio}: prima di iniziare lo stage non avevo mai programmato in Python. &
+        Escogitare dei meccanismi di apprendimento rapido del linguaggio, tramite corsi online e provando fin da subito a scrivere del codice per conto proprio.
+        \newline
+        Chiedere agli altri stagisti qualche domanda più tecnica che mi potesse risparmiare del tempo per la ricerca. & 
+        Occorrenza: Alta \newline Pericolosità: Media \\
+        \hline
+        
+        \textbf{Non conoscenza della materia}: Prima dell'inizio dello stage la conoscenza teorica in mio possesso di \textit{machine learning}, \textit{deep learning} e di reti neurali era generale e per niente applicata. &
+        Frequentare il prima possibile dei corsi specializzanti. &
+        Occorrenza: Alta \newline Pericolosità: Alta \\ 
+        \hline
+        
+        \textbf{Non conoscenza degli strumenti}: Per il \textit{machine learning} e il \textit{deep learning} esistono tutta una serie di strumenti già pronti all'uso che risparmiano molto tempo in fase di progettazione e codifica. &
+        Mettere mano il prima possibile a questa strumentazione, così da entrare in confidenza fin da subito con le tecnologie e familiarizzare con le personalizzazioni che si possono adoperare. &
+        Occorrenza: Alta \newline Pericolosità: Media \\
+        \hline
+        \textbf{Esami durante il lavoro}: Lo stage è iniziato senza avere la certezza di aver superato un esame, che avrei dovuto quindi sostenere durante il periodo di lavoro. &
+        Pianificare il lavoro in maniera tale da lasciare fasi meno impegnative della programmazione - come la fase di test - nel periodo subito precedente l'esame. Così la sera sarei riuscito a studiare. &
+        Occorrenza: Alta \newline Pericolosità: Bassa \\
+        \hline
+    \end{tabular}
+    \caption{Tabella dell'analisi dei rischi}
+\end{table}
+}
+
+
+\section{Pianificazione}
+Dopo un'analisi approfondita degli obiettivi richiesti dall'azienda, dopo essermi reso conto dei rischi e in accordo col tutor aziendale, ho capito che la pianificazione avrebbe dovuto comprendere un numero di ore molto alto per la formazione prima di poter iniziare a sviluppare l'applicazione vera e propria. 
+\medskip
+\\Ho intuito immediatamente poi che la creazione di una "catena di montaggio" sarebbe stata da preferire rispetto ad un approccio monolitico. Questo mi avrebbe permesso di capire più rapidamente il funzionamento di ogni singola parte della \textit{pipeline} (di cui si discuterà in sezione \ref{cap:progettazione}), potendola quindi testare e migliorare man mano grazie ai risultati ottenuti da altre parti della catena. L'effetto collaterale di questo approccio è che il risultato finale, dato dall'assemblaggio dei vari pezzi, sarebbe arrivato più tardi di quanto un approccio monolitico avrebbe potuto offrire.
+
+{
+    \def\arraystretch{2}\tabcolsep=10pt
+\begin{table}[H]
+    \small
+    \begin{tabular}{ |p{2cm} |p{10cm}|}
+        \hline
+        \textbf{Ore} & \textbf{Descrizione dell'attività} \\ \hline
+        
+        24 & Raccolta informazioni e definizioni dei requisiti del progetto; \\ 
+        \hline
+        100 & Formazione su:
+        \begin{itemize}
+            \item python;
+            \item openCV;
+            \item algoritmi di \textit{machine learning} e \textit{deep learning} e loro ottimizzazione;
+            \item basi di \grayname{Tensorflow};
+            \item basi di \grayname{Keras}.
+        \end{itemize}\\ 
+        \hline
+        40 & Creazione della struttura per l'allenamnto di reti neurali; \\ \hline
+        80 & Creazione di un algoritmo per l'estrazione di dati dai documenti; \\ \hline
+        24 & Creazione di test automatici per la valutazione visiva di una rete neurale; \\ \hline
+        18 & (Desiderabile) Creazione di un batch multithreading per un'analisi estensiva su più polizze; \\ \hline
+        18 & (Facoltativo) Integrazione nell'infrastruttura aziendale. \\ \hline
+        
+        \multicolumn{2}{|c|}{\textbf{Totale: 304 ore}} \\ \hline
+        
+    \end{tabular}
+    \caption{Tabella della suddivisione delle ore}
+\end{table}
+}

@@ -1,0 +1,356 @@
+\newpage
+\subsection{Test 3}
+\begin{figure}[!ht] 
+    \centering
+    \includegraphics[width=1\columnwidth]{appendice/test3} 
+    \caption{Test 3}
+    \label{img:test-1}
+\end{figure} 
+\newpage
+
+%============================================================================================
+
+
+\begin{figure}[H]  
+    \begin{minipage}{.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/filtrate/test3_filtered_0_6_adam_1}  
+    \end{minipage}%  
+    \begin{minipage}{0.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/unite/test3_merged_0_6_adam_1}  
+    \end{minipage}  
+    \caption{Test 3, configurazione 1}
+\end{figure}%  
+Configurazione:
+\begin{multicols}{2}
+    \begin{lstlisting}
+image_resizer {
+  fixes_shape_resizer {
+    width: 400
+    heigth: 400
+  }
+}
+first_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.008
+}
+first_stage_nms_iou_threshold: 0.7
+second_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.004
+  }
+}
+second_stage_post_processing {
+  iou_threshold: 0.6
+}
+optimizer {
+  adam_optimizer: {
+    learning_rate: {
+      manual_step_learning_rate {
+        initial_learning_rate: .00008
+        schedule {
+          step: 4500
+          learning_rate: .00004
+        }
+        schedule {
+          step: 7000
+          learning_rate: .00002
+        }
+        schedule {
+          step: 10000
+          learning_rate: .000008
+        }
+    ...
+    }
+    momentum_optimizer_value: 0.9
+  }
+  use_moving_average: false
+}
+\end{lstlisting}
+\end{multicols}
+
+%============================================================================================
+\newpage
+\begin{figure}[H]  
+    \begin{minipage}{.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/filtrate/test3_filtered_0_6_adam_3}  
+    \end{minipage}%  
+    \begin{minipage}{0.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/unite/test3_merged_0_6_adam_3}  
+    \end{minipage}  
+    \caption{Test 3, configurazione 2}
+\end{figure}%  
+Configurazione:
+\begin{multicols}{2}
+    \begin{lstlisting}
+image_resizer {
+  fixes_shape_resizer {
+    width: 400
+    heigth: 400
+  }
+}
+first_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.00001
+}
+first_stage_nms_iou_threshold: 0.7
+second_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.00004
+  }
+}
+second_stage_post_processing {
+  iou_threshold: 0.6
+}
+optimizer {
+  adam_optimizer: {
+    learning_rate: {
+      exponential_decay_learning_rate {
+        initial_learning_rate: 0.0001
+          decay_steps: 600
+          decay_factor: 0.95
+        }
+      }
+    ...
+  use_moving_average: false
+}
+    \end{lstlisting}
+\end{multicols}
+
+%============================================================================================
+\newpage
+\begin{figure}[H]  
+    \begin{minipage}{.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/filtrate/test3_filtered_0_6_adam_4}  
+    \end{minipage}%  
+    \begin{minipage}{0.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/unite/test3_merged_0_6_adam_4}  
+    \end{minipage}  
+    \caption{Test 3, configurazione 3}
+\end{figure}%  
+Configurazione:
+\begin{multicols}{2}
+    \begin{lstlisting}
+image_resizer {
+  fixes_shape_resizer {
+    width: 400
+    heigth: 400
+  }
+}
+first_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.04
+}
+first_stage_nms_iou_threshold: 0.7
+second_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.004
+  }
+}
+second_stage_post_processing {
+  iou_threshold: 0.6
+}
+optimizer {
+  adam_optimizer: {
+    learning_rate: {
+      exponential_decay_learning_rate {
+        initial_learning_rate: 0.0001
+          decay_steps: 450
+          decay_factor: 0.9
+        }
+      }
+    ...
+  use_moving_average: false
+}
+    \end{lstlisting}
+\end{multicols}
+
+%============================================================================================
+\newpage
+\begin{figure}[H]  
+    \begin{minipage}{.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/filtrate/test3_filtered_0_6_momentum_1}  
+    \end{minipage}%  
+    \begin{minipage}{0.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/unite/test3_merged_0_6_momentum_1}  
+    \end{minipage}  
+    \caption{Test 3, configurazione 4}
+\end{figure}%  
+Configurazione:
+\begin{multicols}{2}
+    \begin{lstlisting}
+image_resizer {
+  fixes_shape_resizer {
+    width: 400
+    heigth: 400
+  }
+}
+first_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.00001
+}
+first_stage_nms_iou_threshold: 0.7
+second_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.00004
+  }
+}
+second_stage_post_processing {
+  iou_threshold: 0.6
+}
+optimizer {
+  adam_optimizer: {
+    learning_rate: {
+      manual_step_learning_rate {
+        initial_learning_rate: 0.0008
+        schedule {
+          step: 4500
+          learning_rate: .0008
+        }
+        schedule {
+          step: 7000
+          learning_rate: .0004
+        }
+        schedule {
+          step: 10000
+          learning_rate: .00008
+        }
+    ...
+    }
+    momentum_optimizer_value: 0.9
+  }
+  use_moving_average: false
+}
+    \end{lstlisting}
+\end{multicols}
+%============================================================================================
+
+\newpage
+\begin{figure}[H]  
+    \begin{minipage}{.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/filtrate/test3_filtered_0_6_momentum_10k_jpg}  
+    \end{minipage}%  
+    \begin{minipage}{0.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/unite/test3_merged_0_6_momentum_10k_jpg}  
+    \end{minipage}  
+    \caption{Test 3, configurazione 5}
+\end{figure}%  
+Configurazione:
+\begin{multicols}{2}
+    \begin{lstlisting}
+image_resizer {
+  fixes_shape_resizer {
+    width: 400
+    heigth: 400
+  }
+}
+first_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.004
+}
+first_stage_nms_iou_threshold: 0.7
+second_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.004
+  }
+}
+second_stage_post_processing {
+  iou_threshold: 0.6
+}
+optimizer {
+  adam_optimizer: {
+    learning_rate: {
+      manual_step_learning_rate {
+        initial_learning_rate: 0.0004
+        schedule {
+          step: 4500
+          learning_rate: .0002
+        }
+        schedule {
+          step: 7000
+          learning_rate: .00002
+        }
+        schedule {
+          step: 10000
+          learning_rate: .000002
+        }
+    ...
+    }
+    momentum_optimizer_value: 0.9
+  }
+  use_moving_average: false
+}
+    \end{lstlisting}
+\end{multicols}
+%============================================================================================
+
+\newpage
+\begin{figure}[H]  
+    \begin{minipage}{.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/filtrate/test3_filtered_0_6_momentum_optimizer_1batch}  
+    \end{minipage}%  
+    \begin{minipage}{0.5\columnwidth}  
+        \centering  
+        \includegraphics[width=1\columnwidth]{appendice/unite/test3_merged_0_6_momentum_optimizer_1batch}  
+    \end{minipage}  
+    \caption{Test 3, configurazione 6}
+\end{figure}%  
+Configurazione:
+\begin{multicols}{2}
+    \begin{lstlisting}
+image_resizer {
+  fixes_shape_resizer {
+    width: 400
+    heigth: 400
+  }
+}
+first_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.04
+}
+first_stage_nms_iou_threshold: 0.7
+second_stage_box_predictor {
+  l2_regularizer {
+    weight: 0.004
+  }
+}
+second_stage_post_processing {
+  iou_threshold: 0.6
+}
+batch_size: 1
+optimizer {
+  adam_optimizer: {
+    learning_rate: {
+      manual_step_learning_rate {
+        initial_learning_rate: 0.0004
+        schedule {
+          step: 4500
+          learning_rate: .0002
+        }
+        schedule {
+          step: 7000
+          learning_rate: .00002
+        }
+        schedule {
+          step: 10000
+          learning_rate: .000002
+        }
+    ...
+    }
+    momentum_optimizer_value: 0.9
+  }
+  use_moving_average: false
+}
+    \end{lstlisting}
+\end{multicols}
+%============================================================================================

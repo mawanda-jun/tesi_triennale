@@ -1,0 +1,49 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+% !TeX spellcheck = it_IT
+
+\chapter{Appendice}
+Qui di seguito sono presentati tutti gli allegati di cui si è discusso lungo il documento.
+\section{\textit{Boxes} rilevate nei test}
+\label{sec:test-boxes}
+In questa sezione verranno mostrate le immagini di test con le scatole che la rete neurale ha trovato in essi. Per ogni test verranno presentate l'immagine originale e, a coppie, un'immagine con tutte le migliori scatole trovate sopra il punteggio di $0.6$ e la sua corrispondente con le scatole unite secondo l'algoritmo citato a \ref{sec:interpretazione-modifica-boxes}
+
+\input{capitoli/test0}
+\input{capitoli/test1}
+\input{capitoli/test2}
+\input{capitoli/test3}
+\input{capitoli/test4}
+\input{capitoli/test5}
+
+\section{\textit{Crop} da polizze assicurative}
+\label{sec:crop-polizze-assicurative}
+In questa sezione vengono mostrati i risultati dell'esecuzione dell'algoritmo su polizze assicurative facenti parte del \textit{dataset} datomi in dotazione. Si potrà notare come in alcuni casi l'inferenza abbia avuto risultati sorprendenti, altri in cui si denotano errori grossolani.
+
+\input{capitoli/risultati0}
+\input{capitoli/risultati1}
+\input{capitoli/risultati2}
+\input{capitoli/risultati3}
+\input{capitoli/risultati4}
+\input{capitoli/risultati5}
+%\newpage
+%\subsection{Test 0}
+%\begin{figure}[H] 
+%    \centering
+%    \includegraphics[width=1\columnwidth]{appendice/risultati/Test0_full} 
+%    \caption{Test 0, pagina intera}
+%    \label{img:test-0-full}
+%\end{figure} 
+%\newpage
+%\begin{figure}[H]  
+%        \centering  
+%        \includegraphics[width=1\columnwidth]{appendice/risultati/test0_table}  
+%        \caption{Test 0, tabelle rilevate}
+%\end{figure}
+%\begin{figure}[H]
+%        \centering  
+%        \includegraphics[width=1\columnwidth]{appendice/risultati/test0_text}  
+%        \caption{Test 0, testo rimanente}
+%\end{figure}%  
+%%=============================================================================
+
